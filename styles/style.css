@@ -61,7 +61,7 @@ figure {
 .content__title {
   font-size: 30px;
   padding-block-start: 7%;
-  padding-block-end: 2.8%;
+  padding-block-end: 2.5%;
 }
 
 .header {
@@ -121,7 +121,7 @@ a {
 
  .content__text-block_type_first-lettered > .content__paragraph:first-child:first-letter {
   display: inline-block; 
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FFAB6B);
   padding: 0 4px;
   margin-inline-end: 1px;
   font-size: 30px;
@@ -144,7 +144,7 @@ a {
  }
 
  .content__picture-caption {
-  border-block-end: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--text-color, #312A4E);
   padding: 20px;
   text-align: center;
   font-size: 18px;
@@ -163,7 +163,7 @@ a {
  .content__card-title {
   font-style: normal;
   font-size: 60px;
-  color: var(--text-color);
+  color: var(--text-color, #312A4E);
  }
 
  .content__card-subtitle {
@@ -174,12 +174,13 @@ a {
 
  .colored-text {
   position: relative;
+  display: inline-block;
  }
 
  .colored-text::after {
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FFAB6B);
   z-index: -1;
   width: calc(100% + 8px);
   height: 0.28em;
@@ -203,6 +204,7 @@ a {
  .header__theme-toggler {
   display: flex;
   list-style: none;
+  padding: 0;
  }
 
  .header__theme-button {
@@ -218,7 +220,7 @@ a {
  }
 
  .theme_dark button {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #171717);
  }
 
  .header__theme-button:hover {
@@ -245,7 +247,7 @@ a {
 .header__theme-button_is-active::after {
   content: '';
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FFAB6B);
   z-index: -1;
   width: 100%;
   height: 0.5em;
@@ -254,6 +256,7 @@ a {
 }
 
 .theme_dark .header__theme-button_is-active::after {
+  z-index: 1;
   background-image: url(../images/pattern.svg);
 }
 
